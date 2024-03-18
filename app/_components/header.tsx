@@ -10,18 +10,21 @@ import {
   SheetTrigger,
 } from "./ui/sheet";
 import SideMenu from "./side-menu";
+import Link from "next/link";
 
 const Header = () => {
 
   return (
     <Card>
       <CardContent className="px-5 py-8 flex flex-row justify-between items-center">
-        <Image
+       <Link href="/">
+       <Image
           src="/Logo.png"
           alt="Logo da barbearia"
           height={22}
           width={120}
         />
+       </Link>
         <Sheet>
           <SheetTrigger asChild>
             <Button variant={"outline"} size={"icon"} className="h-8 w-8">
