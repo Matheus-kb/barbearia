@@ -28,7 +28,7 @@ const BookingPage = async () => {
         where: {
           userId: (session.user as any).id,
           date: {
-            gte: new Date(),
+            lt: new Date(),
           },
         },
         include: {
@@ -43,9 +43,11 @@ const BookingPage = async () => {
       <Header />
       <div className="px-5 py-6">
         <h1 className="text-xl font-bold">Agendamentos</h1>
-        <h2 className="text-gray-400 uppercase font-bold text-sm mt-6 mb-3">
+        {confirmedBookings.length === 0 && finishedBookings.length === 0 && (
+          <h2 className="text-gray-400 uppercase font-bold text-sm mt-6 mb-3">
           Confirmados
         </h2>
+        )}
         <div className="flex flex-col gap-3">
           {confirmedBookings.map((booking) => (
             <BookingItem key={booking.id} booking={booking} />
