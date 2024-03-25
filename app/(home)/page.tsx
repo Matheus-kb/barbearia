@@ -41,7 +41,8 @@ export default async function Home() {
       <div className="px-5 mt-6">
         <Search />
       </div>
-      <div className="mt-6">
+      {confirmedBookings.length > 0 && (
+        <div className="mt-6">
         <h2 className="pl-5 text-xs mb-3 uppercase text-gray-400 font-bold">
           Agendamentos
         </h2>
@@ -51,6 +52,7 @@ export default async function Home() {
           ))}
         </div>
       </div>
+      )}
       <div className="mt-6">
         <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold">
           Recomendados
