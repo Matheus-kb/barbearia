@@ -119,7 +119,7 @@ const ServiceItem = ({
         }),
         action: {
           label: "Visualizar",
-          onClick: () => router.push("/booking"),
+          onClick: () => router.push("/bookings"),
         },
       });
     } catch (error) {
