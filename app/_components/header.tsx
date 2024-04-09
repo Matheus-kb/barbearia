@@ -15,7 +15,8 @@ import Link from "next/link";
 const Header = () => {
 
   return (
-    <Card>
+    <header>
+      <Card>
       <CardContent className="px-5 py-8 flex flex-row justify-between items-center">
        <Link href="/">
        <Image
@@ -37,6 +38,7 @@ const Header = () => {
         </Sheet>
       </CardContent>
     </Card>
+    </header>
   );
 };
 
